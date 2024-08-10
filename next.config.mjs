@@ -8,11 +8,15 @@ const nextConfig = {
           },
           {
             protocol: "https",
-            hostname: "ap-southeast-2.graphassets.com",
+            hostname: "images.unsplash.com",
           },
           {
             protocol: "https",
             hostname: "images.clerk.dev",
+          },
+          {
+            protocol: "https",
+            hostname: "i.postimg.cc",
           },
         ],
       },
