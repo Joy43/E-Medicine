@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useEffect, useState } from 'react';
 import { Button, Box, Typography, useMediaQuery, useTheme, Fade } from '@mui/material';
 
@@ -66,8 +66,8 @@ export const Banner: React.FC = () => {
         height: { xs: '300px', sm: '450px', md: '600px' },
         position: 'relative',
         overflow: 'hidden',
-        backgroundColor:'#002540',
-        margin:'8'
+        backgroundColor: '#002540',
+        margin: '8'
       }}
     >
       <Fade in={fadeIn} timeout={500}>
@@ -100,9 +100,21 @@ export const Banner: React.FC = () => {
                 maxWidth: { xs: '90%', sm: '70%', md: '40%' },
               }}
             >
-              <Typography variant={isSmallScreen ? "subtitle2" : "subtitle1"} sx={{ fontWeight: 300 }}>
+              <Button
+                variant="outlined"
+                sx={{
+                  mb: 2,
+                  borderColor: '#0370F7',
+                  color: '#FFFFFF',
+                  fontWeight: 300,
+                  '&:hover': {
+                    backgroundColor: '#0370F7',
+                    color: '#FFFFFF',
+                  },
+                }}
+              >
                 {sliders[currentSlider].quality}
-              </Typography>
+              </Button>
               <Typography variant={isSmallScreen ? "h6" : "h4"} sx={{ fontWeight: 'bold', mb: 2 }}>
                 {sliders[currentSlider].title}
               </Typography>
