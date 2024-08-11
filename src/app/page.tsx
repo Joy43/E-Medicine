@@ -6,6 +6,7 @@ import { FeaturedCategory } from "./Home/FeaturedCategory";
 import FeaturedCard from "./Home/FeaturedCard";
 import Footer from "./Home/Footer";
 import LatestProduct from "./Home/LatestProduct";
+import Category from "./Home/Category";
 
 
 export default function Home() {
@@ -15,8 +16,8 @@ export default function Home() {
       <Navbar />
       <Banner />
       <FeaturedCard></FeaturedCard>
-      <FeaturedCategory/>
-      
+      {/* <FeaturedCategory/> */}
+      <Category></Category>
    <LatestProduct></LatestProduct>
    <Footer></Footer>
     </>

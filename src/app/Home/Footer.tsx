@@ -1,48 +1,80 @@
+import Image from 'next/image';
 import React from 'react';
+import shipng from "../assets/icon/shipping.png";
+import money from "../assets/icon/money.png";
+import protect from "../assets/icon/protect.png";
+import discount from "../assets/icon/discount.png";
 
+const icons = { shipng, money, protect, discount };
+
+interface ProductSell {
+    id: number;
+    name: string;
+    des: string;
+    icon: keyof typeof icons;
+}
 interface IconProps {
     className?: string;
 }
+const products: ProductSell[] = [
+    { id: 1, name: 'SHIPPING', des: 'Orders All Over $100', icon: 'shipng' },
+    { id: 2, name: 'MONEY BACK', des: 'With a 30 Day Minimum', icon: 'money' },
+    { id: 3, name: 'SECURE PAYMENT', des: 'Orders All Over $100', icon: 'protect' },
+    { id: 4, name: 'DISCOUNT', des: 'Orders All Over $100', icon: 'discount' },
+];
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col justify-around gap-5 bg-black py-8 text-white">
-            <nav className="text-lg">
-                <ul className="flex h-full flex-wrap items-center justify-center gap-3">
-                    <li>
-                        <a className="cursor-pointer hover:underline ">Home</a>
-                    </li>
-                    <li>
-                        <a className="cursor-pointer hover:underline ">Contact</a>
-                    </li>
-                    <li>
-                        <a className="cursor-pointer hover:underline ">About</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav className="text-lg">
-                <ul className="flex h-full flex-wrap items-center justify-center gap-5">
-                    <li className="cursor-pointer">
-                        <a>
-                            <Facebook className="size-6 fill-current text-[#0370F7] hover:text-[#F60301]" />
-                        </a>
-                    </li>
-                    <li className="cursor-pointer">
-                        <a>
-                            <Twitter className="size-6 fill-current text-[#0370F7] hover:text-[#F60301]" />
-                        </a>
-                    </li>
-                    <li className="cursor-pointer">
-                        <a>
-                            <YouTube className="size-6 fill-current text-[#0370F7] hover:text-[#F60301]" />
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <aside className="text-center text-lg text-[#0370F7]">
-                <p>&copy; 2024 E-Medicine shop</p>
-            </aside>
-        </footer>
+        <>
+            <div className='grid lg:grid-cols-4 gap-3  justify-center p-8 bg-slate-300'>
+                {products.map((product) => (
+                    <div key={product.id} className="bg-white w-fit h-fit shadow-lg rounded-xl p-4 text-center flex  items-center">
+                       <div>
+                       <Image
+                            className="rounded-full mb-4"
+                            src={icons[product.icon]}
+                            alt={product.name}
+                            width={60}
+                            height={60}
+                        />
+                       </div>
+                        <div><h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
+                        <p className="text-sm text-gray-600">{product.des}</p></div>
+                    </div>
+                ))}
+            </div>
+            <footer className="flex flex-col justify-around gap-5 bg-black py-8 text-white">
+                <nav className="text-lg">
+                    <ul className="flex h-full flex-wrap items-center justify-center gap-3">
+                        <li><a className="cursor-pointer hover:underline">Home</a></li>
+                        <li><a className="cursor-pointer hover:underline">Contact</a></li>
+                        <li><a className="cursor-pointer hover:underline">About</a></li>
+                    </ul>
+                </nav>
+                <nav className="text-lg">
+                    <ul className="flex h-full flex-wrap items-center justify-center gap-5">
+                        <li className="cursor-pointer">
+                            <a>
+                                <Facebook className="size-6 fill-current text-[#0370F7] hover:text-[#F60301]" />
+                            </a>
+                        </li>
+                        <li className="cursor-pointer">
+                            <a>
+                                <Twitter className="size-6 fill-current text-[#0370F7] hover:text-[#F60301]" />
+                            </a>
+                        </li>
+                        <li className="cursor-pointer">
+                            <a>
+                                <YouTube className="size-6 fill-current text-[#0370F7] hover:text-[#F60301]" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <aside className="text-center text-lg text-[#0370F7]">
+                    <p>&copy; 2024 E-Medicine Shop</p>
+                </aside>
+            </footer>
+        </>
     );
 }
 
