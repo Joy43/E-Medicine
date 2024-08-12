@@ -1,11 +1,13 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Lottie from 'lottie-react';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
+import notFoundAnimation from '../app/assets/404.json';
+import Buttons from './Component/Button/Buttons';
 
-import notFoundAnimation from '../app/assets/404.json'; 
+const NotFound: React.FC = () => {
+  const router = useRouter();
 
-function NotFound() {
   return (
     <Box
       sx={{
@@ -31,20 +33,7 @@ function NotFound() {
       <Typography variant="body1" sx={{ mb: 4, color: '#0370F7' }}>
         The page you are looking for might have been removed or is temporarily unavailable.
       </Typography>
-      <Link href="/" passHref>
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: '#0370F7',
-            color: '#FFFFFF',
-            '&:hover': {
-              backgroundColor: '#002540',
-            },
-          }}
-        >
-          Go Back Home
-        </Button>
-      </Link>
+      <Buttons label={'Take Me Home'} onClick={() => router.push('/')} />
     </Box>
   );
 }

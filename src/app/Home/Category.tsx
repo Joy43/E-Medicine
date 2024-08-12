@@ -2,7 +2,10 @@
 
 
 import Marquee from 'react-fast-marquee';
-import vaccine from "../assets/Microscope-Care-.jpg";
+import strethoscope from "../assets/Category/strethoscope.jpg";
+import medikit from "../assets/Category/medikit.jpeg";
+import pharmach from "../assets/Category/pharmach.jpeg";
+import mask from "../assets/Category/sergeryumask.jpeg";
 import Image from 'next/image';
 
 interface Testimonial {
@@ -15,7 +18,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
     <div className="min-w-full flex-shrink-0 p-6">
         <div className="bg-[#002540] rounded-lg shadow-lg overflow-hidden">
             <Image
-                className="w-full h-64 object-cover"
+                className="w-80 h-64 object-cover"
                 src={testimonial.image}
                 alt={`${testimonial.name}'s testimonial`}
             />
@@ -36,10 +39,10 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
 
 const Category: React.FC = () => {
     const array: Testimonial[] = [
-        { name: 'strethoscope', image: vaccine, item: 3 },
-        { name: 'medikits', image: vaccine, item: 4 },
-        { name: 'pharmacy', image: vaccine, item: 5 },
-        { name: 'sugical mask', image: vaccine, item: 6 }
+        { name: 'strethoscope', image: strethoscope, item: 3 },
+        { name: 'medikits', image: medikit, item: 4 },
+        { name: 'pharmacy', image: pharmach, item: 5 },
+        { name: 'sugical mask', image: mask, item: 6 }
     ];
 
     return (
