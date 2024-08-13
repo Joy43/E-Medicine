@@ -10,7 +10,7 @@ export default function layout({children}:LayoutProps) {
     <div>
       <Navbar></Navbar>
       {children}
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   )
 }

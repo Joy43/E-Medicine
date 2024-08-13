@@ -28,7 +28,7 @@ export default function Footer() {
         <>
             <div className='grid lg:grid-cols-4 gap-3  justify-center p-8 bg-slate-300'>
                 {products.map((product) => (
-                    <div key={product.id} className="bg-white w-fit h-fit shadow-lg rounded-xl p-4 text-center flex  items-center">
+                    <div key={product.id} className="bg-[#1F2937] w-fit h-fit shadow-lg rounded-xl p-4 text-center flex  items-center">
                        <div>
                        <Image
                             className="rounded-full mb-4"
@@ -38,8 +38,8 @@ export default function Footer() {
                             height={60}
                         />
                        </div>
-                        <div><h3 className="text-lg font-semibold text-gray-800">{product.name}</h3>
-                        <p className="text-sm text-gray-600">{product.des}</p></div>
+                        <div><h3 className="text-lg font-semibold text-white">{product.name}</h3>
+                        <p className="text-sm text-white">{product.des}</p></div>
                     </div>
                 ))}
             </div>

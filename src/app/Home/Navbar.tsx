@@ -17,12 +17,13 @@ import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import useAuth from '../Hooks/useAuth';
+import Buttons from '../Component/Button/Buttons';
 
 const pages = [
-  { name: 'Home', url: '/' },
-  { name: 'About', url: '/about' },
+  { name: 'Product', url: '/product' },
+ 
   { name: 'Policy', url: '/policy' },
-  { name: 'Notice', url: '/contact' },
+  { name: 'Contact', url: '/contact' },
 ];
 
 const settings = [
@@ -187,8 +188,9 @@ function Navbar() {
                   </MenuItem>
                 ))
               ) : (
-                <MenuItem onClick={() => router.push('/signup')}>
-                  <Typography textAlign="center">Login</Typography>
+                <MenuItem >
+                  {/* <Typography textAlign="center">Login</Typography> */}
+                  <Buttons label={'Login'} onClick={() => router.push('/signup')}  />
                 </MenuItem>
               )}
               {user && (

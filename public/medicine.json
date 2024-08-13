@@ -1,0 +1,107 @@
+[
+    {
+        "_id": "654f6d935abba09d18da69cb",
+        "name": "Paracetamol 500mg",
+        "location": "Canterbury, United Kingdom",
+        "manufacturedDate": "2023-11-27T18:00:00.000Z",
+        "expiryDate": "2025-11-27T18:00:00.000Z",
+        "price": 5.99,
+        "quantity": "20 Tablets",
+        "dosage": "1-2 tablets every 4-6 hours as needed",
+        "description": "Paracetamol is a widely used over-the-counter pain reliever and a fever reducer. It is commonly used to treat headaches, muscle aches, arthritis, backaches, toothaches, colds, and fevers.",
+        "image": "https://i.ibb.co/f1494DN/london.webp",
+        "manufacturer": {
+          "name": "Med Pharma Ltd.",
+          "image": "https://example.com/med_pharma_logo.png",
+          "email": "info@medpharma.com"
+        },
+        "category": "OTC Medicine"
+      },
+      {
+        "_id": "654f6d935ee09d18da69cb",
+        "name": "Ibuprofen 400mg",
+        "location": "Gaular, Norway",
+        "manufacturedDate": "2023-10-25T18:00:00.000Z",
+        "expiryDate": "2025-10-25T18:00:00.000Z",
+        "price": 8.49,
+        "quantity": "30 Tablets",
+        "dosage": "1 tablet every 6-8 hours as needed",
+        "description": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce fever and treat pain or inflammation caused by various conditions such as headaches, toothaches, back pain, arthritis, menstrual cramps, or minor injuries.",
+        "image": "https://i.ibb.co/M6mBkXT/Avalon-Beach.webp",
+        "manufacturer": {
+          "name": "HealthCare Pharmaceuticals",
+          "image": "https://example.com/healthcare_pharma_logo.png",
+          "email": "contact@healthcarepharma.com"
+        },
+        "category": "OTC Medicine"
+      },
+    {
+      "_id": "654f6d935abba09d18da69cb",
+      "name": "Condoms - Ultra Thin",
+      "location": "Canterbury, United Kingdom",
+      "manufacturedDate": "2023-11-27T18:00:00.000Z",
+      "expiryDate": "2026-11-27T18:00:00.000Z",
+      "price": 9.99,
+      "quantity": "12 Pack",
+      "description": "Ultra-thin condoms designed for maximum sensitivity and comfort, providing effective protection while enhancing pleasure. Made from high-quality latex, electronically tested for safety.",
+      "image": "https://i.ibb.co/f1494DN/london.webp",
+      "manufacturer": {
+        "name": "Intimacy Essentials Ltd.",
+        "image": "https://example.com/intimacy_essentials_logo.png",
+        "email": "support@intimacyessentials.com"
+      },
+      "category": "Sexual Wellness"
+    },
+    {
+      "_id": "654f6d935ee09d18da69cb",
+      "name": "Prenatal Multivitamin",
+      "location": "Gaular, Norway",
+      "manufacturedDate": "2023-10-25T18:00:00.000Z",
+      "expiryDate": "2025-10-25T18:00:00.000Z",
+      "price": 19.99,
+      "quantity": "60 Tablets",
+      "description": "A comprehensive prenatal multivitamin formulated with essential nutrients to support the health of mother and baby during pregnancy. Includes folic acid, iron, and DHA for optimal prenatal care.",
+      "image": "https://i.ibb.co/M6mBkXT/Avalon-Beach.webp",
+      "manufacturer": {
+        "name": "Maternal Health Co.",
+        "image": "https://example.com/maternal_health_logo.png",
+        "email": "info@maternalhealth.com"
+      },
+      "category": "Women's Choice"
+    },
+    {
+      "_id": "654f6d935cc09d18da69cb",
+      "name": "Baby Diapers - Size 3",
+      "location": "Oslo, Norway",
+      "manufacturedDate": "2023-09-15T18:00:00.000Z",
+      "expiryDate": "2026-09-15T18:00:00.000Z",
+      "price": 24.99,
+      "quantity": "84 Diapers",
+      "description": "Super absorbent diapers designed for babies weighing 16-28 lbs. Features soft materials, leak-proof barriers, and a snug fit for comfort and protection.",
+      "image": "https://i.ibb.co/f1494DN/diapers.webp",
+      "manufacturer": {
+        "name": "Baby Care Products Ltd.",
+        "image": "https://example.com/baby_care_logo.png",
+        "email": "care@babycare.com"
+      },
+      "category": "Baby Care"
+    },
+    {
+      "_id": "654f6d935dd09d18da69cb",
+      "name": "Glucose Monitoring Kit",
+      "location": "London, United Kingdom",
+      "manufacturedDate": "2023-08-10T18:00:00.000Z",
+      "expiryDate": "2026-08-10T18:00:00.000Z",
+      "price": 39.99,
+      "quantity": "1 Kit",
+      "description": "Complete glucose monitoring kit including a glucometer, test strips, and lancets. Easy-to-use and accurate, designed to help manage diabetes effectively at home.",
+      "image": "https://i.ibb.co/M6mBkXT/glucose-monitor.webp",
+      "manufacturer": {
+        "name": "Diabetes Care Solutions",
+        "image": "https://example.com/diabetes_care_logo.png",
+        "email": "support@diabetescare.com"
+      },
+      "category": "Diabetic Care"
+    }
+  ]
+  
