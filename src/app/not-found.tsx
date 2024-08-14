@@ -2,9 +2,10 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Lottie from 'lottie-react';
-import { useRouter } from 'next/router';
+
 import notFoundAnimation from '../app/assets/404.json';
 import Buttons from './Component/Button/Buttons';
+import { useRouter } from 'next/navigation';
 
 const NotFound: React.FC = () => {
   const router = useRouter();

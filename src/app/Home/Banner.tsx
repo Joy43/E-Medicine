@@ -1,6 +1,8 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 import { Button, Box, Typography, useMediaQuery, useTheme, Fade } from '@mui/material';
+import { useRouter } from 'next/navigation';
 
 interface Slider {
   img: string;
@@ -15,6 +17,7 @@ export const Banner: React.FC = () => {
   const [fadeIn, setFadeIn] = useState<boolean>(true);
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const router = useRouter(); // using useRouter from next/navigation
 
   const sliders: Slider[] = [
     {
@@ -135,6 +138,7 @@ export const Banner: React.FC = () => {
                     backgroundColor: '#002540',
                   },
                 }}
+                onClick={() => router.push('/product')}
               >
                 Shop Now
               </Button>

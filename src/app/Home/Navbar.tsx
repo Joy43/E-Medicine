@@ -1,36 +1,34 @@
 "use client";
 
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import useAuth from '../Hooks/useAuth';
-import Buttons from '../Component/Button/Buttons';
-
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import LocalPharmacyIcon from "@mui/icons-material/LocalPharmacy";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import useAuth from "../Hooks/useAuth";
+import Buttons from "../Component/Button/Buttons";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"; 
+import Badge from "@mui/material/Badge";
 const pages = [
-  { name: 'Product', url: '/product' },
- 
-  { name: 'Policy', url: '/policy' },
-  { name: 'Contact', url: '/contact' },
+  { name: "Policy", url: "/policy" },
+  { name: "Contact", url: "/contact" },
 ];
 
 const settings = [
-  { name: 'Profile', url: '/profile' },
-  { name: 'Dashboard', url: '/dashboard' },
-  { name: 'Account', url: '/account' },
-  { name: 'Logout', url: '/' },
+  { name: "Profile", url: "/profile" },
+  { name: "Dashboard", url: "/cart" },
+  { name: "Account", url: "/account" },
 ];
 
 function Navbar() {
@@ -59,17 +57,17 @@ function Navbar() {
   const handleLogOut = async () => {
     try {
       await logOut();
-      router.push('/');
+      router.push("/");
     } catch (error) {
-      console.error('Failed to log out:', error);
+      console.error("Failed to log out:", error);
     }
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: "#002540" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <LocalPharmacyIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <LocalPharmacyIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "#0370F7" }} />
           <Typography
             variant="h6"
             noWrap
@@ -77,25 +75,25 @@ function Navbar() {
             href="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              letterSpacing: ".3rem",
+              color: "#F60301",
+              textDecoration: "none",
             }}
           >
             eMedicine
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{ color: "#0370F7" }}
             >
               <MenuIcon />
             </IconButton>
@@ -103,29 +101,31 @@ function Navbar() {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
+              sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Link href={page.url} passHref>
-                    <Typography textAlign="center">{page.name}</Typography>
+                    <Typography textAlign="center" sx={{ color: "#0370F7" }}>
+                      {page.name}
+                    </Typography>
                   </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
-          <LocalPharmacyIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <LocalPharmacyIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1, color: "#0370F7" }} />
           <Typography
             variant="h5"
             noWrap
@@ -133,71 +133,90 @@ function Navbar() {
             href="/"
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              letterSpacing: ".3rem",
+              color: "#F60301",
+              textDecoration: "none",
             }}
           >
             eMedicine
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page.name}
-                href={page.url}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
+              <Button key={page.name} href={page.url} sx={{ my: 2, color: "#0370F7", display: "block" }}>
                 {page.name}
               </Button>
             ))}
           </Box>
 
+          {/*----------- Go Product -----------------*/}
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, justifyContent: "center" }}>
+  <IconButton onClick={() => router.push("/product")} sx={{ color: "#0370F7" }}>
+    <Badge
+      badgeContent={4} 
+      color="error"
+      sx={{
+        '& .MuiBadge-badge': {
+          borderRadius: '12px',  
+          minWidth: '24px',    
+          height: '18px',        
+          padding: '0 6px',      
+        },
+      }}
+    >
+      <ShoppingCartIcon fontSize="large" />
+    </Badge>
+  </IconButton>
+</Box>
+{/* ---------------user account---------- */}
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="User Avatar" src={user?.photoURL || ''} />
-              </IconButton>
-            </Tooltip>
+            {user ? (
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar alt="User Avatar" src={user?.photoURL || ""} />
+                </IconButton>
+              </Tooltip>
+            ) : (
+              <Buttons label={"Login"} onClick={() => router.push("/google")} />
+            )}
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
               {user ? (
-                settings.map((setting) => (
-                  <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
-                    <Link href={setting.url} passHref>
-                      <Typography textAlign="center">{setting.name}</Typography>
-                    </Link>
+                <>
+                  {settings.map((setting) => (
+                    <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
+                      <Link href={setting.url} passHref>
+                        <Typography textAlign="center" sx={{ color: "#0370F7" }}>
+                          {setting.name}
+                        </Typography>
+                      </Link>
+                    </MenuItem>
+                  ))}
+                  <MenuItem onClick={handleLogOut}>
+                    <Typography textAlign="center" sx={{ color: "#F60301" }}>
+                      Logout
+                    </Typography>
                   </MenuItem>
-                ))
-              ) : (
-                <MenuItem >
-                  {/* <Typography textAlign="center">Login</Typography> */}
-                  <Buttons label={'Login'} onClick={() => router.push('/signup')}  />
-                </MenuItem>
-              )}
-              {user && (
-                <MenuItem onClick={handleLogOut}>
-                  <Typography textAlign="center">Logout</Typography>
-                </MenuItem>
-              )}
+                </>
+              ) : null}
             </Menu>
           </Box>
         </Toolbar>

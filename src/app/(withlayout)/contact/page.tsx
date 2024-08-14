@@ -166,7 +166,7 @@ const ContactUs: React.FC = () => {
               </div>
               <div className="mb-6">
                 <textarea
-                  className="w-full rounded-2xl placeholder:text-xs px-6 py-4"
+                  className="w-full text-black rounded-2xl placeholder:text-xs px-6 py-4"
                   placeholder="Please message here"
                   rows={8}
                   value={formData.message}
