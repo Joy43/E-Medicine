@@ -28,7 +28,7 @@ const useProduct = (search: string): [Product[], boolean] => {
       try {
         setLoading(true);
         const response = await fetch(
-          `http://localhost:5000/product?search=${search}`
+          `https://e-medicine-server.vercel.app/product?search=${search}`
         );
         const data = await response.json();
         setProducts(data);

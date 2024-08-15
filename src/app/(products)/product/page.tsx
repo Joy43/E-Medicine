@@ -1,13 +1,20 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Image from 'next/image';
 import { Button } from '@mui/material';
 import CategoryIcon from '@mui/icons-material/Category';
-import { FaTag, FaCalendarDay, FaCalendarAlt } from 'react-icons/fa'; // Importing icons
+import { FaTag, FaCalendarDay, FaCalendarAlt } from 'react-icons/fa';
 import Buttons from '../../Component/Button/Buttons';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion'; // For animations
+import { motion } from 'framer-motion';
 import useProduct from '@/app/Hooks/useProduct';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { AuthContext } from '@/app/Authentication/Proividers/AuthProviders';
+
+
+import useAxiosSecure from '@/app/Hooks/AxiosSequre';
+
 
 interface Product {
   _id: string;
@@ -29,36 +36,86 @@ interface Product {
 const Product: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [search, setSearch] = useState('');
   const router = useRouter();
+  const [product] = useProduct(search);
+  const { user, loading } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure();
 
-
-  useEffect(() => {
-    const fetchMedicineData = async () => {
-      try {
-        const res = await fetch('http://localhost:5000/carts');
-        const data: Product[] = await res.json();
-        setProducts(data);
-      } catch (error) {
-        console.error('Error fetching product data:', error);
-      }
+// -------------add to cart-------------
+const handleAddToCart = async (product: Product) => {
+  if (user?.email) {
+    const cartItem = {
+      productId: product._id,
+      email: user.email,
+      name: product.name,
+      image: product.image,
+      price: product.price,
     };
-    fetchMedicineData();
-  }, []);
 
-  const categories = Array.from(new Set(products.map(product => product.category)));
-  const filteredProducts = selectedCategory ? products.filter(product => product.category === selectedCategory) : products;
+    try {
+      const res = await axiosSecure.post('/carts', cartItem);
+      if (res.data.insertedId) {
+        toast.success(`${product.name} added to your cart`, {
+          position: 'top-right',
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        // Optionally refetch the cart to update the cart item count
+        //  refetch();
+      }
+    } catch (error) {
+      toast.error('Error adding to cart', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  } else {
+    toast.warn('Please log in to add items to your cart.', {
+      position: 'top-right',
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    router.push('/login');
+  }
+};
+
+// --------------search-----------
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const searchText = (e.currentTarget.elements.namedItem('search') as HTMLInputElement).value;
+    setSearch(searchText);
+  };
+
+  const categories = Array.from(new Set(products.map((product) => product.category)));
+  const filteredProducts = selectedCategory ? products.filter((product) => product.category === selectedCategory) : products;
 
   return (
     <div style={{ backgroundColor: '#f0f4f8', color: '#333', padding: '20px', margin: '10px', borderRadius: '10px' }}>
-      {/*-------------- Category Filter -----------------------------*/}
-      <div style={{
-        display: 'flex',
-        gap: '10px',
-        marginBottom: '20px',
-        flexWrap: 'wrap',
-        justifyContent: 'center'
-      }}>
-        {categories.map(category => (
+      {/* ----------Category Filter------------------ */}
+      <div
+        style={{
+          display: 'flex',
+          gap: '10px',
+          marginBottom: '20px',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+        }}
+      >
+        {categories.map((category) => (
           <Button
             key={category}
             onClick={() => setSelectedCategory(category)}
@@ -111,14 +168,49 @@ const Product: React.FC = () => {
         </Button>
       </div>
 
-      {/*------------- Product Cards ---------------*/}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-        gap: '20px',
-        justifyContent: 'center'
-      }}>
-        {filteredProducts.map(product => (
+      {/* Search Bar */}
+      <div className="mt-6 mb-7">
+        <div
+          className="w-full flex flex-row flex-wrap bg-gray-600 p-10 py-20 justify-center"
+          style={{
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundBlendMode: 'multiply',
+            backgroundPosition: 'center center',
+            backgroundImage:
+              "url('https://i.postimg.cc/8PHzzPRp/Moderna-s-Vaccine.png')",
+          }}
+        >
+          <div className="w-full text-center">
+            <div className="text-3xl text-center text-white antialiased">Get Medicine Name</div>
+            <div className="text-xl text-center text-white antialiased">Find out the Medicine product around world</div>
+          </div>
+          <form onSubmit={handleSearch} className="mt-3 flex flex-row flex-wrap">
+            <div className="text-white w-2/3">
+              <input type="text" name="search" className="w-full p-2 rounded-l-lg text-black" placeholder="Name, Title.." />
+            </div>
+            <div className="w-1/3">
+              <button
+                className="w-full text-white p-2 bg-indigo-400 rounded-r-lg text-center hover:bg-indigo-300"
+                type="submit"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      {/* Product Cards */}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+          gap: '20px',
+          justifyContent: 'center',
+        }}
+      >
+        {product.map((product) => (
           <motion.div
             key={product._id}
             style={{
@@ -135,14 +227,16 @@ const Product: React.FC = () => {
             whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(0, 0, 0, 0.3)' }}
             whileTap={{ scale: 0.95 }}
           >
-            <div style={{
-              width: '100%',
-              height: '200px',
-              position: 'relative',
-              overflow: 'hidden',
-              borderRadius: '10px',
-              marginBottom: '15px'
-            }}>
+            <div
+              style={{
+                width: '100%',
+                height: '200px',
+                position: 'relative',
+                overflow: 'hidden',
+                borderRadius: '10px',
+                marginBottom: '15px',
+              }}
+            >
               <Image
                 src={product.image}
                 alt={product.name}
@@ -164,10 +258,23 @@ const Product: React.FC = () => {
               <FaCalendarAlt style={{ marginRight: '8px', fontSize: '1.25rem' }} />
               <strong>Expiry:</strong> {new Date(product.expiryDate).toLocaleDateString()}
             </p>
-            {/* --------------buy buttons------ */}
+            {/* Buy Button */}
             <div style={{ marginTop: '20px' }}>
-            
-              <Buttons label={'Buy now'} onClick={() => router.push('/')} style={{ padding: '10px 20px', backgroundColor: '#0066cc', color: '#ffffff' }} />
+            <Button
+                onClick={() => handleAddToCart(product)}
+                variant="contained"
+                sx={{
+                  px: 4,
+                  py: 1.5,
+                  backgroundColor: '#0370F7',
+                  color: '#FFFFFF',
+                  '&:hover': {
+                    backgroundColor: '#F60301',
+                  },
+                }}
+              >
+                Add to cart
+              </Button>
             </div>
           </motion.div>
         ))}

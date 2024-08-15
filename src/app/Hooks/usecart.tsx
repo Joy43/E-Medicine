@@ -1,21 +1,21 @@
-import { useQuery } from "@tanstack/react-query";
+
+import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import useaxiosSequre from "./AxiosSequre";
 import useAuth from "./useAuth";
 
-type CartItem = {
-  // Define the structure of your cart items here based on the data you receive
+interface CartItem {
+  // Define the shape of the cart item based on your data structure
   id: string;
   name: string;
-  price: number;
   quantity: number;
-  // Add other properties as needed
-};
+  price: number;
+}
 
 const useCart = (): [CartItem[], () => void] => {
   const axiosSecure = useaxiosSequre();
   const { user } = useAuth();
 
-  const { refetch, data: cart = [] } = useQuery<CartItem[]>({
+  const { refetch, data = [] } = useQuery<CartItem[]>({
     queryKey: ["cart", user?.email],
     queryFn: async () => {
       if (!user?.email) {
@@ -24,10 +24,9 @@ const useCart = (): [CartItem[], () => void] => {
       const res = await axiosSecure.get(`/carts?email=${user.email}`);
       return res.data;
     },
-    enabled: !!user?.email, 
   });
 
-  return [cart, refetch];
+  return [data, refetch];
 };
 
 export default useCart;
