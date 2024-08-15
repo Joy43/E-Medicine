@@ -20,6 +20,7 @@ import useAuth from "../Hooks/useAuth";
 import Buttons from "../Component/Button/Buttons";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"; 
 import Badge from "@mui/material/Badge";
+import useCart from "../Hooks/usecart";
 const pages = [
   { name: "Policy", url: "/policy" },
   { name: "Contact", url: "/contact" },
@@ -36,6 +37,7 @@ function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   const { user, logOut } = useAuth() || {};
+  const [cart] = useCart();
 console.log(user);
   const router = useRouter();
 
@@ -158,7 +160,7 @@ console.log(user);
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, justifyContent: "center" }}>
   <IconButton onClick={() => router.push("/product")} sx={{ color: "#0370F7" }}>
     <Badge
-      badgeContent={4} 
+      badgeContent={cart.length} 
       color="error"
       sx={{
         '& .MuiBadge-badge': {

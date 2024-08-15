@@ -4,16 +4,17 @@ import Image from 'next/image';
 import { Button } from '@mui/material';
 import CategoryIcon from '@mui/icons-material/Category';
 import { FaTag, FaCalendarDay, FaCalendarAlt } from 'react-icons/fa';
-import Buttons from '../../Component/Button/Buttons';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import useProduct from '@/app/Hooks/useProduct';
-import axios from 'axios';
+
 import { toast } from 'react-toastify';
 import { AuthContext } from '@/app/Authentication/Proividers/AuthProviders';
-
+import 'react-toastify/dist/ReactToastify.css';
+import Swal from "sweetalert2";
 
 import useAxiosSecure from '@/app/Hooks/AxiosSequre';
+import useCart from '@/app/Hooks/usecart';
 
 
 interface Product {
@@ -41,7 +42,7 @@ const Product: React.FC = () => {
   const [product] = useProduct(search);
   const { user, loading } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
-
+  const [refetch] = useCart();
 // -------------add to cart-------------
 const handleAddToCart = async (product: Product) => {
   if (user?.email) {
@@ -56,17 +57,15 @@ const handleAddToCart = async (product: Product) => {
     try {
       const res = await axiosSecure.post('/carts', cartItem);
       if (res.data.insertedId) {
-        toast.success(`${product.name} added to your cart`, {
-          position: 'top-right',
-          autoClose: 1500,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
+        Swal.fire({
+         
+          icon: "success",
+          title: `${name} added to your cart`,
+          showConfirmButton: true,
+          timer: 1500,
         });
         // Optionally refetch the cart to update the cart item count
-        //  refetch();
+          refetch();
       }
     } catch (error) {
       toast.error('Error adding to cart', {
@@ -89,7 +88,7 @@ const handleAddToCart = async (product: Product) => {
       draggable: true,
       progress: undefined,
     });
-    router.push('/login');
+    router.push('/signup');
   }
 };
 
