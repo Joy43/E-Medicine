@@ -1,3 +1,4 @@
+'use client'
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState, FormEvent } from "react";
 import Swal from "sweetalert2";

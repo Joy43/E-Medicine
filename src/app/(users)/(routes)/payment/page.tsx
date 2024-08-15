@@ -2,7 +2,8 @@
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe, Stripe } from "@stripe/stripe-js";
 import { FC } from "react";
-import CheckoutForm from "../checkoutpayment/page";
+import CheckoutForm from "../checkoutpayment/CheckoutFrom";
+
 
 
 // Load Stripe outside of a component’s render to avoid recreating the `Stripe` object on every render.
