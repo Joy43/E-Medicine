@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const cardData = [
   {
@@ -29,6 +30,7 @@ const cardData = [
 ];
 
 const FeaturedCard: React.FC = () => {
+  const router=useRouter()
   return (
     <div className='p-4'>
         <h1 className='font-serif text-2xl text-[#0370F7] mb-4 text-center sm:text-left'>Our Feature Products</h1>
@@ -56,6 +58,7 @@ const FeaturedCard: React.FC = () => {
             <p className="text-[#fff] text-base md:text-lg mb-6">{card.description}</p>
           </div>
           <Button
+          onClick={() => router.push('/product')}
             variant="contained"
             sx={{
               px: 4,

@@ -1,40 +1,363 @@
 [
-    {
-      "_id": "654f6d935abba09d18da69cb",
+  {
+
+      "name": "Paracetamol 500mg",
       "location": "Canterbury, United Kingdom",
-      "title": "Bumble Barn at Great Field Farm",
-      "from": "2023-11-27T18:00:00.000Z",
-      "to": "2023-11-29T18:00:00.000Z",
-      "price": 305,
-      "guests": "6",
-      "bedrooms": "3",
-      "bathrooms": "2",
-      "description": "Great Field Farm is set in 45 acres, including gardens, paddocks and the great field with different crops each year.\nBumble Barn is the newest addition to our eco-friendly  holiday lodges. Built to Passiv house standards with smart technology and a beautiful living sedum roof that bees love.\nThe views from the sitting room and patio over open fields and sky are stunning, with wildlife all around",
-      "image": "https://i.ibb.co/f1494DN/london.webp",
-      "host": {
-        "name": "Shakil Ahmed Atik",
-        "image": "https://lh3.googleusercontent.com/a/ACg8ocJpxSpFQvm4fucJxMSOYG07EY-4eEqymED0zn2w8hBgHw=s96-c",
-        "email": "shakilatik.ph@gmail.com"
+      "manufacturedDate": "2023-11-27T18:00:00.000Z",
+      "expiryDate": "2025-11-27T18:00:00.000Z",
+      "price": 5.99,
+      "quantity": "20 Tablets",
+      "dosage": "1-2 tablets every 4-6 hours as needed",
+      "description": "Paracetamol is a widely used over-the-counter pain reliever and a fever reducer. It is commonly used to treat headaches, muscle aches, arthritis, backaches, toothaches, colds, and fevers.",
+      "image": "https://i.ibb.co/DLg5TXd/otc.jpg",
+      "manufacturer": {
+          "name": "Med Pharma Ltd.",
+        
+          "email": "info@medpharma.com"
       },
-      "category": "Modern"
-    },
-    {
-      "_id": "654f6d935ee09d18da69cb",
+      "category": "OTC Medicine"
+  },
+  {
+ 
+      "name": "Ibuprofen 400mg",
       "location": "Gaular, Norway",
-      "title": "Breathtaking Mountain views in cozy Birdbox",
-      "from": "2023-11-25T18:00:00.000Z",
-      "to": "2023-11-29T18:00:00.000Z",
-      "price": 269,
-      "guests": "2",
-      "bedrooms": "1",
-      "bathrooms": "1",
-      "description": "Enjoy the relaxed and comfortable enclosure of the Birdbox. Sleep right beside nature and its amazing  surroundings. Lay down and look at the spectacular mountains all around you. Put on your skis and have a breathtaking journey around the nearby trails. Hike down to Langelandsvatnet in the summer and enjoy swimming in energizing water. Your imagination is the limit for what you can experience.",
-      "image": "https://i.ibb.co/M6mBkXT/Avalon-Beach.webp",
-      "host": {
-        "name": "Shakil Ahmed Atik",
-        "image": "https://lh3.googleusercontent.com/a/ACg8ocJpxSpFQvm4fucJxMSOYG07EY-4eEqymED0zn2w8hBgHw=s96-c",
-        "email": "shakilatik.ph@gmail.com"
+      "manufacturedDate": "2023-10-25T18:00:00.000Z",
+      "expiryDate": "2025-10-25T18:00:00.000Z",
+      "price": 8.49,
+      "quantity": "30 Tablets",
+      "dosage": "1 tablet every 6-8 hours as needed",
+      "description": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce fever and treat pain or inflammation caused by various conditions such as headaches, toothaches, back pain, arthritis, menstrual cramps, or minor injuries.",
+      "image": "https://i.ibb.co/zQfJ1ZD/otc.jpg",
+      "manufacturer": {
+          "name": "HealthCare Pharmaceuticals",
+        
+          "email": "contact@healthcarepharma.com"
       },
-      "category": "Beach"
-    }
-  ]
+      "category": "OTC Medicine"
+  },
+  {
+      
+      "name": "Condoms - Ultra Thin",
+      "location": "Canterbury, United Kingdom",
+      "manufacturedDate": "2023-11-27T18:00:00.000Z",
+      "expiryDate": "2026-11-27T18:00:00.000Z",
+      "price": 9.99,
+      "quantity": "12 Pack",
+      "description": "Ultra-thin condoms designed for maximum sensitivity and comfort, providing effective protection while enhancing pleasure. Made from high-quality latex, electronically tested for safety.",
+      "image": "https://i.ibb.co/p4QtZMT/Durex.jpg",
+      "manufacturer": {
+          "name": "Intimacy Essentials Ltd.",
+         
+          "email": "support@intimacyessentials.com"
+      },
+      "category": "Sexual Wellness"
+  },
+  
+  {
+  
+      "name": "Prenatal Multivitamin",
+      "location": "Gaular, Norway",
+      "manufacturedDate": "2023-10-25T18:00:00.000Z",
+      "expiryDate": "2025-10-25T18:00:00.000Z",
+      "price": 19.99,
+      "quantity": "60 Tablets",
+      "description": "A comprehensive prenatal multivitamin formulated with essential nutrients to support the health of mother and baby during pregnancy. Includes folic acid, iron, and DHA for optimal prenatal care.",
+      "image": "https://i.ibb.co/VNY2t3n/women.jpg",
+      "manufacturer": {
+          "name": "Maternal Health Co.",
+         
+          "email": "info@maternalhealth.com"
+      },
+      "category": "Women's Choice"
+  },
+  {
+ 
+      "name": "Baby Diapers - Size 3",
+      "location": "Oslo, Norway",
+      "manufacturedDate": "2023-09-15T18:00:00.000Z",
+      "expiryDate": "2026-09-15T18:00:00.000Z",
+      "price": 24.99,
+      "quantity": "84 Diapers",
+      "description": "Super absorbent diapers designed for babies weighing 16-28 lbs. Features soft materials, leak-proof barriers, and a snug fit for comfort and protection.",
+      "image": "https://i.ibb.co/DtLktBz/baby.jpg",
+      "manufacturer": {
+          "name": "Baby Care Products Ltd.",
+          
+          "email": "care@babycare.com"
+      },
+      "category": "Baby Care"
+  },
+  {
+     
+      "name": "Glucose Monitoring Kit",
+      "location": "London, United Kingdom",
+      "manufacturedDate": "2023-08-10T18:00:00.000Z",
+      "expiryDate": "2026-08-10T18:00:00.000Z",
+      "price": 39.99,
+      "quantity": "1 Kit",
+      "description": "Complete glucose monitoring kit including a glucometer, test strips, and lancets. Easy-to-use and accurate, designed to help manage diabetes effectively at home.",
+     "image":"https://i.ibb.co/DC3RHMv/Diabetic-Care.jpg",
+      "manufacturer": {
+          "name": "Diabetes Care Solutions",
+         
+          "email": "support@diabetescare.com"
+      },
+      "category": "Diabetic Care"
+  },
+  {
+  
+      "name": "Hand Sanitizer - 250ml",
+      "location": "Bergen, Norway",
+      "manufacturedDate": "2023-07-12T18:00:00.000Z",
+      "expiryDate": "2025-07-12T18:00:00.000Z",
+      "price": 4.99,
+      "quantity": "250 ml",
+      "description": "Antibacterial hand sanitizer with 70% alcohol content. Kills 99.9% of germs and bacteria, leaving hands feeling clean and refreshed.",
+      "image": "https://i.ibb.co/hRQ7TrT/Personal-Care.jpg",
+      "manufacturer": {
+          "name": "SafeHands Ltd.",
+         
+          "email": "contact@safehands.com"
+      },
+      "category": "Personal Care"
+  },
+  {
+   
+      "name": "Vitamin C - 1000mg",
+      "location": "Canterbury, United Kingdom",
+      "manufacturedDate": "2023-06-15T18:00:00.000Z",
+      "expiryDate": "2025-06-15T18:00:00.000Z",
+      "price": 12.99,
+      "quantity": "120 Tablets",
+      "description": "High-potency Vitamin C supplement to support the immune system. Provides antioxidant protection and helps in the absorption of iron.",
+      "image": "https://i.ibb.co/N9CKMRn/Vitamins-Supplements.jpg",
+      "manufacturer": {
+          "name": "PureHealth Supplements",
+         
+          "email": "info@purehealth.com"
+      },
+      "category": "Vitamins & Supplements"
+  },
+  {
+     
+      "name": "Cold & Flu Relief",
+      "location": "Oslo, Norway",
+      "manufacturedDate": "2023-05-10T18:00:00.000Z",
+      "expiryDate": "2025-05-10T18:00:00.000Z",
+      "price": 7.49,
+      "quantity": "16 Capsules",
+      "description": "Cold and flu relief capsules to help alleviate symptoms such as fever, cough, and nasal congestion. Contains acetaminophen and phenylephrine.",
+      "image": "https://i.ibb.co/566wLqY/otc.jpg",
+      "manufacturer": {
+          "name": "Relief Pharmaceuticals",
+          
+          "email": "support@reliefpharma.com"
+      },
+      "category": "OTC Medicine"
+  },
+  {
+      
+      "name": "Pain Relief Cream",
+      "location": "Bergen, Norway",
+      "manufacturedDate": "2023-02-20T18:00:00.000Z",
+      "expiryDate": "2025-02-20T18:00:00.000Z",
+      "price": 9.99,
+      "quantity": "50 g",
+      "description": "Topical pain relief cream with menthol and camphor. Provides temporary relief from muscle and joint pain.",
+      "image": "https://i.ibb.co/0BZdL5T/Topical-Treatments.jpg",
+      "manufacturer": {
+          "name": "PainAway Ltd.",
+         
+          "email": "info@painaway.com"
+      },
+      "category": "Topical Treatments"
+  },
+  {
+
+      "name": "Hair Growth Serum",
+      "location": "Canterbury, United Kingdom",
+      "manufacturedDate": "2022-11-05T18:00:00.000Z",
+      "expiryDate": "2025-11-05T18:00:00.000Z",
+      "price": 29.99,
+      "quantity": "60 ml",
+      "description": "Hair growth serum formulated to stimulate hair follicles and improve hair thickness. Contains biotin, caffeine, and other nutrients.",
+      "image": "https://i.ibb.co/sWFJgv8/hair.jpg",
+      "manufacturer": {
+          "name": "HairRevive Solutions",
+         
+          "email": "contact@hairrevive.com"
+      },
+      "category": "Hair Care"
+  },
+  {
+      
+      "name": "Sunscreen SPF 50",
+      "location": "Oslo, Norway",
+      "manufacturedDate": "2022-07-01T18:00:00.000Z",
+      "expiryDate": "2025-07-01T18:00:00.000Z",
+      "price": 15.49,
+      "quantity": "100 ml",
+      "description": "Broad-spectrum sunscreen with SPF 50 to protect against UVA and UVB rays. Water-resistant and suitable for all skin types.",
+      "image": "https://i.ibb.co/6XkGq8Z/Sun-Care.jpg",
+      "manufacturer": {
+          "name": "SunSafe Ltd.",
+         
+          "email": "info@sunsafe.com"
+      },
+      "category": "Sun Care"
+  },
+
+  {
+    
+      "name": "Shoe Inserts - Arch Support",
+      "location": "Canterbury, United Kingdom",
+      "manufacturedDate": "2022-05-15T18:00:00.000Z",
+      "expiryDate": "2025-05-15T18:00:00.000Z",
+      "price": 12.49,
+      "quantity": "1 Pair",
+      "description": "Orthopedic shoe inserts designed to provide arch support and alleviate foot pain. Suitable for most shoe types.",
+      "image":"https://i.ibb.co/km3BJZd/Foot-Care.jpg",
+      "manufacturer": {
+          "name": "FootComfort Ltd.",
+         
+          "email": "support@footcomfort.com"
+      },
+      "category": "Foot Care"
+  },
+  {
+   
+      "name": "Antibiotic Ointment",
+      "location": "Bergen, Norway",
+      "manufacturedDate": "2022-04-10T18:00:00.000Z",
+      "expiryDate": "2025-04-10T18:00:00.000Z",
+      "price": 7.99,
+      "quantity": "30 g",
+      "description": "Antibiotic ointment to help prevent infection in minor cuts, burns, and scrapes. Contains bacitracin and polymyxin B.",
+      "image": "https://i.ibb.co/4SVGCvn/Topical-Treatments.jpg",
+      "manufacturer": {
+          "name": "WoundCare Products",
+          
+          "email": "info@woundcare.com"
+      },
+      "category": "Topical Treatments"
+  },
+  {
+     
+      "name": "Digital Thermometer",
+      "location": "London, United Kingdom",
+      "manufacturedDate": "2022-03-20T18:00:00.000Z",
+      "expiryDate": "2025-03-20T18:00:00.000Z",
+      "price": 14.99,
+      "quantity": "1 Unit",
+      "description": "Digital thermometer with fast and accurate temperature readings. Features a flexible tip for comfort and an easy-to-read display.",
+      "image": "https://i.ibb.co/mCTzzZM/Vitamins-Supplements-3.jpg",
+      "manufacturer": {
+          "name": "HealthTech Devices",
+          "email": "info@healthtech.com"
+      },
+      "category": "Medical Devices"
+  },
+  {
+     
+      "name": "First Aid Kit",
+      "location": "London, United Kingdom",
+      "manufacturedDate": "2023-03-18T18:00:00.000Z",
+      "expiryDate": "2026-03-18T18:00:00.000Z",
+      "price": 29.99,
+      "quantity": "1 Kit",
+      "description": "Comprehensive first aid kit for home, car, or travel. Includes bandages, antiseptic wipes, gauze pads, and more to treat minor injuries.",
+      "image": "https://i.ibb.co/tCtZW90/first-aid.png",
+      "manufacturer": {
+          "name": "Emergency Essentials Ltd.",
+          
+          "email": "support@emergencyessentials.com"
+      },
+      "category": "First Aid"
+  },
+  {
+     
+      "name": "Protein Powder - Chocolate",
+      "location": "Canterbury, United Kingdom",
+      "manufacturedDate": "2023-02-14T18:00:00.000Z",
+      "expiryDate": "2025-02-14T18:00:00.000Z",
+      "price": 34.99,
+      "quantity": "2 lbs",
+      "description": "Premium whey protein powder in chocolate flavor. Supports muscle recovery and growth after workouts. Mixes easily with water or milk.",
+      "image": "https://i.ibb.co/VWxjWhR/sports.jpg",
+      "manufacturer": {
+          "name": "FitNutrition",
+         
+          "email": "info@fitnutrition.com"
+      },
+      "category": "Sports Nutrition"
+  },
+  {
+     
+      "name": "Omega-3 Fish Oil",
+      "location": "Bergen, Norway",
+      "manufacturedDate": "2023-01-10T18:00:00.000Z",
+      "expiryDate": "2025-01-10T18:00:00.000Z",
+      "price": 18.99,
+      "quantity": "120 Softgels",
+      "description": "High-quality Omega-3 fish oil supplement for heart health. Contains EPA and DHA to support cardiovascular and cognitive function.",
+      "image": "https://i.ibb.co/mCTzzZM/Vitamins-Supplements-3.jpg",
+      "manufacturer": {
+          "name": "HeartCare Supplements",
+          
+          "email": "support@heartcare.com"
+      },
+      "category": "Vitamins & Supplements"
+  },
+
+  {
+      
+      "name": "Herbal Sleep Aid",
+      "location": "Oslo, Norway",
+      "manufacturedDate": "2022-12-05T18:00:00.000Z",
+      "expiryDate": "2025-12-05T18:00:00.000Z",
+      "price": 14.49,
+      "quantity": "30 Capsules",
+      "description": "Natural herbal sleep aid to help improve sleep quality. Contains valerian root, chamomile, and melatonin.",
+      "image": "https://i.ibb.co/L5STddY/sleep-aids.webp",
+      "manufacturer": {
+          "name": "Herbal Wellness Co.",
+          
+          "email": "info@herbalwellness.com"
+      },
+      "category": "Sleep Aids"
+  },
+  {
+     
+      "name": "Toothpaste - Whitening",
+      "location": "Canterbury, United Kingdom",
+      "manufacturedDate": "2023-03-20T18:00:00.000Z",
+      "expiryDate": "2025-03-20T18:00:00.000Z",
+      "price": 3.99,
+      "quantity": "100 ml",
+      "description": "Whitening toothpaste formulated to remove stains and brighten teeth. Contains fluoride for cavity protection and enamel strengthening.",
+      "image": "https://i.ibb.co/k0BKLr3/oral-carejpg.jpg",
+      "manufacturer": {
+          "name": "BrightSmile",
+        
+          "email": "info@brightsmile.com"
+      },
+      "category": "Oral Care"
+  },
+  {
+      
+      "name": "Shampoo - Anti-Dandruff",
+      "location": "Oslo, Norway",
+      "manufacturedDate": "2023-01-15T18:00:00.000Z",
+      "expiryDate": "2025-01-15T18:00:00.000Z",
+      "price": 11.99,
+      "quantity": "300 ml",
+      "description": "Anti-dandruff shampoo formulated to reduce flaking and itching. Contains active ingredients to combat dandruff and soothe the scalp.",
+      "image": "https://i.ibb.co/W0gZBLF/hair.jpg",
+      "manufacturer": {
+          "name": "HairCare Experts",
+          
+          "email": "support@haircareexperts.com"
+      },
+      "category": "Hair Care"
+  }
+]

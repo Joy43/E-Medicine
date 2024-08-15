@@ -23,6 +23,7 @@ import Badge from "@mui/material/Badge";
 const pages = [
   { name: "Policy", url: "/policy" },
   { name: "Contact", url: "/contact" },
+  { name: "Dashboad", url: "/cart" },
 ];
 
 const settings = [
@@ -35,7 +36,7 @@ function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   const { user, logOut } = useAuth() || {};
-
+console.log(user);
   const router = useRouter();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {

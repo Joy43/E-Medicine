@@ -24,7 +24,7 @@ const GoogleLogin: React.FC = () => {
       const res = await axiosPublic.post('/users', userInfo);
       console.log(res.data);
       
-      router.push('/');
+      router.push('/product');
     } catch (error) {
       console.error('Error during Google Sign-In:', error);
     }

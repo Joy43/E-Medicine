@@ -9,10 +9,10 @@
       "quantity": "20 Tablets",
       "dosage": "1-2 tablets every 4-6 hours as needed",
       "description": "Paracetamol is a widely used over-the-counter pain reliever and a fever reducer. It is commonly used to treat headaches, muscle aches, arthritis, backaches, toothaches, colds, and fevers.",
-      "image": "https://i.ibb.co/f1494DN/london.webp",
+      "image": "https://i.ibb.co/DLg5TXd/otc.jpg",
       "manufacturer": {
           "name": "Med Pharma Ltd.",
-          "image": "https://example.com/med_pharma_logo.png",
+        
           "email": "info@medpharma.com"
       },
       "category": "OTC Medicine"
@@ -27,10 +27,10 @@
       "quantity": "30 Tablets",
       "dosage": "1 tablet every 6-8 hours as needed",
       "description": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce fever and treat pain or inflammation caused by various conditions such as headaches, toothaches, back pain, arthritis, menstrual cramps, or minor injuries.",
-      "image": "https://i.ibb.co/M6mBkXT/Avalon-Beach.webp",
+      "image": "https://i.ibb.co/zQfJ1ZD/otc.jpg",
       "manufacturer": {
           "name": "HealthCare Pharmaceuticals",
-          "image": "https://example.com/healthcare_pharma_logo.png",
+        
           "email": "contact@healthcarepharma.com"
       },
       "category": "OTC Medicine"
@@ -44,14 +44,15 @@
       "price": 9.99,
       "quantity": "12 Pack",
       "description": "Ultra-thin condoms designed for maximum sensitivity and comfort, providing effective protection while enhancing pleasure. Made from high-quality latex, electronically tested for safety.",
-      "image": "https://i.ibb.co/f1494DN/london.webp",
+      "image": "https://i.ibb.co/p4QtZMT/Durex.jpg",
       "manufacturer": {
           "name": "Intimacy Essentials Ltd.",
-          "image": "https://example.com/intimacy_essentials_logo.png",
+         
           "email": "support@intimacyessentials.com"
       },
       "category": "Sexual Wellness"
   },
+  
   {
       "_id": "654f6d935dd09d18da69cb",
       "name": "Prenatal Multivitamin",
@@ -61,10 +62,10 @@
       "price": 19.99,
       "quantity": "60 Tablets",
       "description": "A comprehensive prenatal multivitamin formulated with essential nutrients to support the health of mother and baby during pregnancy. Includes folic acid, iron, and DHA for optimal prenatal care.",
-      "image": "https://i.ibb.co/M6mBkXT/Avalon-Beach.webp",
+      "image": "https://i.ibb.co/VNY2t3n/women.jpg",
       "manufacturer": {
           "name": "Maternal Health Co.",
-          "image": "https://example.com/maternal_health_logo.png",
+         
           "email": "info@maternalhealth.com"
       },
       "category": "Women's Choice"
@@ -78,10 +79,10 @@
       "price": 24.99,
       "quantity": "84 Diapers",
       "description": "Super absorbent diapers designed for babies weighing 16-28 lbs. Features soft materials, leak-proof barriers, and a snug fit for comfort and protection.",
-      "image": "https://i.ibb.co/f1494DN/diapers.webp",
+      "image": "https://i.ibb.co/DtLktBz/baby.jpg",
       "manufacturer": {
           "name": "Baby Care Products Ltd.",
-          "image": "https://example.com/baby_care_logo.png",
+          
           "email": "care@babycare.com"
       },
       "category": "Baby Care"
@@ -95,10 +96,10 @@
       "price": 39.99,
       "quantity": "1 Kit",
       "description": "Complete glucose monitoring kit including a glucometer, test strips, and lancets. Easy-to-use and accurate, designed to help manage diabetes effectively at home.",
-      "image": "https://i.ibb.co/M6mBkXT/glucose-monitor.webp",
+     "image":"https://i.ibb.co/DC3RHMv/Diabetic-Care.jpg",
       "manufacturer": {
           "name": "Diabetes Care Solutions",
-          "image": "https://example.com/diabetes_care_logo.png",
+         
           "email": "support@diabetescare.com"
       },
       "category": "Diabetic Care"
@@ -112,10 +113,10 @@
       "price": 4.99,
       "quantity": "250 ml",
       "description": "Antibacterial hand sanitizer with 70% alcohol content. Kills 99.9% of germs and bacteria, leaving hands feeling clean and refreshed.",
-      "image": "https://i.ibb.co/7WBY1r7/hand-sanitizer.webp",
+      "image": "https://i.ibb.co/hRQ7TrT/Personal-Care.jpg",
       "manufacturer": {
           "name": "SafeHands Ltd.",
-          "image": "https://example.com/safehands_logo.png",
+         
           "email": "contact@safehands.com"
       },
       "category": "Personal Care"
@@ -129,10 +130,10 @@
       "price": 12.99,
       "quantity": "120 Tablets",
       "description": "High-potency Vitamin C supplement to support the immune system. Provides antioxidant protection and helps in the absorption of iron.",
-      "image": "https://i.ibb.co/5vYNvJm/vitamin-c.webp",
+      "image": "https://i.ibb.co/N9CKMRn/Vitamins-Supplements.jpg",
       "manufacturer": {
           "name": "PureHealth Supplements",
-          "image": "https://example.com/purehealth_logo.png",
+         
           "email": "info@purehealth.com"
       },
       "category": "Vitamins & Supplements"
@@ -146,10 +147,10 @@
       "price": 7.49,
       "quantity": "16 Capsules",
       "description": "Cold and flu relief capsules to help alleviate symptoms such as fever, cough, and nasal congestion. Contains acetaminophen and phenylephrine.",
-      "image": "https://i.ibb.co/QpxbqVG/cold-flu.webp",
+      "image": "https://i.ibb.co/566wLqY/otc.jpg",
       "manufacturer": {
           "name": "Relief Pharmaceuticals",
-          "image": "https://example.com/relief_pharma_logo.png",
+          
           "email": "support@reliefpharma.com"
       },
       "category": "OTC Medicine"
@@ -163,10 +164,10 @@
       "price": 9.99,
       "quantity": "50 g",
       "description": "Topical pain relief cream with menthol and camphor. Provides temporary relief from muscle and joint pain.",
-      "image": "https://i.ibb.co/v1b6FdH/pain-relief-cream.webp",
+      "image": "https://i.ibb.co/0BZdL5T/Topical-Treatments.jpg",
       "manufacturer": {
           "name": "PainAway Ltd.",
-          "image": "https://example.com/painaway_logo.png",
+         
           "email": "info@painaway.com"
       },
       "category": "Topical Treatments"
@@ -180,10 +181,10 @@
       "price": 29.99,
       "quantity": "60 ml",
       "description": "Hair growth serum formulated to stimulate hair follicles and improve hair thickness. Contains biotin, caffeine, and other nutrients.",
-      "image": "https://i.ibb.co/fkVdK75/hair-growth-serum.webp",
+      "image": "https://i.ibb.co/sWFJgv8/hair.jpg",
       "manufacturer": {
           "name": "HairRevive Solutions",
-          "image": "https://example.com/hairrevive_logo.png",
+         
           "email": "contact@hairrevive.com"
       },
       "category": "Hair Care"
@@ -197,14 +198,15 @@
       "price": 15.49,
       "quantity": "100 ml",
       "description": "Broad-spectrum sunscreen with SPF 50 to protect against UVA and UVB rays. Water-resistant and suitable for all skin types.",
-      "image": "https://i.ibb.co/xg9M8k6/sunscreen.webp",
+      "image": "https://i.ibb.co/6XkGq8Z/Sun-Care.jpg",
       "manufacturer": {
           "name": "SunSafe Ltd.",
-          "image": "https://example.com/sunsafe_logo.png",
+         
           "email": "info@sunsafe.com"
       },
       "category": "Sun Care"
   },
+
   {
       "_id": "654f6d93912409d18da69cb",
       "name": "Shoe Inserts - Arch Support",
@@ -214,10 +216,10 @@
       "price": 12.49,
       "quantity": "1 Pair",
       "description": "Orthopedic shoe inserts designed to provide arch support and alleviate foot pain. Suitable for most shoe types.",
-      "image": "https://i.ibb.co/8ccNNkP/shoe-inserts.webp",
+      "image":"https://i.ibb.co/km3BJZd/Foot-Care.jpg",
       "manufacturer": {
           "name": "FootComfort Ltd.",
-          "image": "https://example.com/footcomfort_logo.png",
+         
           "email": "support@footcomfort.com"
       },
       "category": "Foot Care"
@@ -231,10 +233,10 @@
       "price": 7.99,
       "quantity": "30 g",
       "description": "Antibiotic ointment to help prevent infection in minor cuts, burns, and scrapes. Contains bacitracin and polymyxin B.",
-      "image": "https://i.ibb.co/8sv1C4s/antibiotic-ointment.webp",
+      "image": "https://i.ibb.co/4SVGCvn/Topical-Treatments.jpg",
       "manufacturer": {
           "name": "WoundCare Products",
-          "image": "https://example.com/woundcare_logo.png",
+          
           "email": "info@woundcare.com"
       },
       "category": "Topical Treatments"
@@ -248,10 +250,9 @@
       "price": 14.99,
       "quantity": "1 Unit",
       "description": "Digital thermometer with fast and accurate temperature readings. Features a flexible tip for comfort and an easy-to-read display.",
-      "image": "https://i.ibb.co/yX9R9NQ/digital-thermometer.webp",
+      "image": "https://i.ibb.co/mCTzzZM/Vitamins-Supplements-3.jpg",
       "manufacturer": {
           "name": "HealthTech Devices",
-          "image": "https://example.com/healthtech_logo.png",
           "email": "info@healthtech.com"
       },
       "category": "Medical Devices"
@@ -265,10 +266,10 @@
       "price": 29.99,
       "quantity": "1 Kit",
       "description": "Comprehensive first aid kit for home, car, or travel. Includes bandages, antiseptic wipes, gauze pads, and more to treat minor injuries.",
-      "image": "https://i.ibb.co/3fmR9Mw/first-aid-kit.webp",
+      "image": "https://i.ibb.co/tCtZW90/first-aid.png",
       "manufacturer": {
           "name": "Emergency Essentials Ltd.",
-          "image": "https://example.com/emergency_essentials_logo.png",
+          
           "email": "support@emergencyessentials.com"
       },
       "category": "First Aid"
@@ -282,10 +283,10 @@
       "price": 34.99,
       "quantity": "2 lbs",
       "description": "Premium whey protein powder in chocolate flavor. Supports muscle recovery and growth after workouts. Mixes easily with water or milk.",
-      "image": "https://i.ibb.co/rGgP3xY/protein-powder.webp",
+      "image": "https://i.ibb.co/VWxjWhR/sports.jpg",
       "manufacturer": {
           "name": "FitNutrition",
-          "image": "https://example.com/fitnutrition_logo.png",
+         
           "email": "info@fitnutrition.com"
       },
       "category": "Sports Nutrition"
@@ -299,14 +300,15 @@
       "price": 18.99,
       "quantity": "120 Softgels",
       "description": "High-quality Omega-3 fish oil supplement for heart health. Contains EPA and DHA to support cardiovascular and cognitive function.",
-      "image": "https://i.ibb.co/6PJz9pS/omega-3.webp",
+      "image": "https://i.ibb.co/mCTzzZM/Vitamins-Supplements-3.jpg",
       "manufacturer": {
           "name": "HeartCare Supplements",
-          "image": "https://example.com/heartcare_logo.png",
+          
           "email": "support@heartcare.com"
       },
       "category": "Vitamins & Supplements"
   },
+
   {
       "_id": "654f6d938cde09d18da69cb",
       "name": "Herbal Sleep Aid",
@@ -316,10 +318,10 @@
       "price": 14.49,
       "quantity": "30 Capsules",
       "description": "Natural herbal sleep aid to help improve sleep quality. Contains valerian root, chamomile, and melatonin.",
-      "image": "https://i.ibb.co/W3MQb6T/herbal-sleep-aid.webp",
+      "image": "https://i.ibb.co/L5STddY/sleep-aids.webp",
       "manufacturer": {
           "name": "Herbal Wellness Co.",
-          "image": "https://example.com/herbal_wellness_logo.png",
+          
           "email": "info@herbalwellness.com"
       },
       "category": "Sleep Aids"
@@ -333,10 +335,10 @@
       "price": 3.99,
       "quantity": "100 ml",
       "description": "Whitening toothpaste formulated to remove stains and brighten teeth. Contains fluoride for cavity protection and enamel strengthening.",
-      "image": "https://i.ibb.co/zY5ZqYQ/toothpaste.webp",
+      "image": "https://i.ibb.co/k0BKLr3/oral-carejpg.jpg",
       "manufacturer": {
           "name": "BrightSmile",
-          "image": "https://example.com/brightSmile_logo.png",
+        
           "email": "info@brightsmile.com"
       },
       "category": "Oral Care"
@@ -350,10 +352,10 @@
       "price": 11.99,
       "quantity": "300 ml",
       "description": "Anti-dandruff shampoo formulated to reduce flaking and itching. Contains active ingredients to combat dandruff and soothe the scalp.",
-      "image": "https://i.ibb.co/FVzJWJB/shampoo.webp",
+      "image": "https://i.ibb.co/W0gZBLF/hair.jpg",
       "manufacturer": {
           "name": "HairCare Experts",
-          "image": "https://example.com/haircareexperts_logo.png",
+          
           "email": "support@haircareexperts.com"
       },
       "category": "Hair Care"
